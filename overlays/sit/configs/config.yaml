@@ -26,10 +26,10 @@ redis:
   database: 0
   # redis-auth-string: $REDIS_AUTH_STRING
 
-kafka:
-  address:
-    - kafka.poc.internal:9092
-  topic: gal-topic
+# kafka:
+#   address:
+#     - kafka.poc.internal:9092
+#   topic: gal-topic
 
 user-list-key: USER_LIST
 user-total-key: USER_TOTAL
