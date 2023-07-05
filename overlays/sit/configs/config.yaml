@@ -31,8 +31,8 @@ redis:
 #     - kafka.poc.internal:9092
 #   topic: gal-topic
 
-user-list-key: USER_LIST
-user-total-key: USER_TOTAL
+user-list-key: GALGAL_USER_LIST
+user-total-key: GALGAL_USER_TOTAL
 # secrets:
 #   db-user: $SECRET_DB_NAME
 #   db-password: $SECRET_DB_PASSWORD
