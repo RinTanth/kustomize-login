@@ -27,6 +27,6 @@ redis:
 
 user-list-key: GALGAL_USER_LIST
 user-total-key: GALGAL_USER_TOTAL
-otp-key: GALGAL_OTP_REDIS2
+otp-key: GALGAL_OTP_REDIS8
 # test
 
