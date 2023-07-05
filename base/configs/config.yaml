@@ -24,12 +24,6 @@ redis:
   address: 172.28.241.3:6379
   password:
   database: 0
-  # redis-auth-string: $REDIS_AUTH_STRING
-
-# kafka:
-#   address:
-#     - kafka.poc.internal:9092
-#   topic: gal-topic
 
 user-list-key: GALGAL_USER_LIST
 user-total-key: GALGAL_USER_TOTAL
