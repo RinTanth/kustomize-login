@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - resources/deployment.yaml
+  - resources/service.yaml
+configMapGenerator:
+  - name: galgal-user-login-configmap-env
+    envs:
+      - configs/config.env
+  - name: galgal-user-login-configmap-file
+    files:
+      - configs/config.yaml
+secretGenerator:
+  - name: galgal-user-login-secret-env
+    envs:
+      - secrets/secret.env

@@ -1,0 +1,31 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base
+
+images:
+  - name: asia.gcr.io/poc-innovation-iot/galgal-user-login
+    newTag: 0d1bfe80
+
+    # - name: asia.gcr.io/poc-innovation-iot/training-kube/galgal-user-login
+    #   newTag: v1.4
+
+configMapGenerator:
+  - behavior: merge
+    envs:
+      - configs/config.env
+    name: galgal-user-login-configmap-env
+  - behavior: merge
+    files:
+      - configs/config.yaml
+    name: galgal-user-login-configmap-file
+
+secretGenerator:
+  - behavior: merge
+    envs:
+      - secrets/secret.env
+    name: galgal-user-login-secret-env
+
+patchesStrategicMerge:
+  - patches/set_resources.yaml

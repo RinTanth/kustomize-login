@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: galgal-user-login
+  labels:
+    app.kubernetes.io/name: galgal-user-login
+    app.kubernetes.io/instance: galgal-user-login
+spec:
+  type: ClusterIP
+  ports:
+    - port: 8080
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: galgal-user-login
+    app.kubernetes.io/instance: galgal-user-login
