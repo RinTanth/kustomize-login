@@ -33,6 +33,7 @@ redis:
 
 user-list-key: GALGAL_USER_LIST
 user-total-key: GALGAL_USER_TOTAL
+otp-key: GALGAL_OTP_REDIS
 # secrets:
 #   db-user: $SECRET_DB_NAME
 #   db-password: $SECRET_DB_PASSWORD
